@@ -31,7 +31,7 @@ class Express {
 	}
 
     public init(): any {
-        const port = Locals.config().port;
+        const port = process.env.PORT || '5000';// Locals.config().port;
         Logger.info( Locals.config() );
         this.express.listen(port, () => {
            Logger.info( `server started at http://localhost:${ port }` );
