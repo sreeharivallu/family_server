@@ -28,6 +28,7 @@ class Express {
     private mountRoutes (): void {
         this.express = Routes.mountApi(this.express);
         this.express = Routes.mountMemberApi(this.express);
+        this.express = Routes.mountUserApi(this.express);
 	}
 
     public init(): any {
